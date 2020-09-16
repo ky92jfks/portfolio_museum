@@ -88,6 +88,7 @@ a:hover {
   float: left;
   position: relative;
   padding: 8px;
+  margin-right: 8px;
 }
 
 .caption .text p {
@@ -114,17 +115,34 @@ a:hover {
 
 .caption a i {
   color: #ffffff;
+  margin-top: 12px;
   margin-bottom: 4px;
   float: right;
   position: absolute;
-  bottom: 8px;
-  -webkit-transform: translateX(-16px);
-          transform: translateX(-16px);
 }
 
 .caption .text:after {
   content: "";
   display: block;
   clear: both;
+}
+
+/* ############# 767px以下(SP) ############# */
+@media (max-width: 767px) {
+  .text {
+    float: left;
+  }
+  a i {
+    float: right;
+    position: absolute;
+    bottom: 8px;
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+  .text:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 /*# sourceMappingURL=detail_style.css.map */

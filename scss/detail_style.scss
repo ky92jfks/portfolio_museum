@@ -5,20 +5,20 @@ body, div, img, ul, li, a, h1, p, time {
 }
 
 body {
-	margin: 0;
+    margin: 0;
     background-color: #000000;
-	font-family: 'Lato', 'Noto Sans JP', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
-	font-size: 16px;
-	color: #6e6e6e;
+    font-family: 'Lato', 'Noto Sans JP', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+    font-size: 16px;
+    color: #6e6e6e;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-	opacity: 0.5;
-	transition: all  0.1s ease;
+    opacity: 0.5;
+    transition: all  0.1s ease;
 }
 
 /* body fadein */
@@ -81,6 +81,7 @@ a:hover {
         float: left;
         position: relative;
         padding: 8px;
+        margin-right: 8px;
 
         p {
             color: #ffffff;
@@ -102,11 +103,27 @@ a:hover {
     }
     a i {
         color: #ffffff;
+        margin-top: 12px;
         margin-bottom: 4px;
         float: right;
         position: absolute;
+    }
+    .text:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+/* ############# 767px以下(SP) ############# */
+@media (max-width: 767px) {
+    .text {
+        float: left;
+    }
+    a i {
+        float: right;
+        position: absolute;
         bottom: 8px;
-        // right: 0;
         transform: translateX(-16px);
     }
     .text:after {
