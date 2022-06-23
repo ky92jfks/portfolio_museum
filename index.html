@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/top_style.css">
+    <link rel="stylesheet" href="css/top_style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,600&amp;subset=japanese" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     <title>top</title>
 </head>
-<body class="fadeout">
+<body>
 <header class="header">
     <div class="header_inner">
         <div class="header_items">
             <h1>まいにち美術館</h1>
-            <!-- <ul>
-                <li><a href="">What's New</a></li>
-                <li><a href="">Information</a></li>
-                <li><a href="">Museum</a></li>
-            </ul> -->
-            <!-- <i class="fas fa-bars"></i> -->
         </div>
     </div>
 </header>
@@ -78,46 +72,6 @@
         <p>&copy; Copyright 2022 K.Yaguchi Portfolio Site All Rights Reserved.</p>
     </div>
 </footer>
-<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
-  <script>
-    new Masonry('.contents', {
-      itemSelector: '.item',
-      columnWidth: 180,
-      gutter: 4
-    });
-  </script> -->
-<!-- <script src="packery.pkgd.min.js"></script>
-<script>
-    var $container = $('#packery');
-        $container.packery({
-        itemSelector: '.item',
-        gutter: 3
-    });
-</script> -->
 
-<!-- フェードイン/アウト -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-<script>
-    var fadeTime = 100,
-    fadeSelector = 'fadeout';
-
-    $(function() {
-        $('a:not([href^="#"]):not([target])').on('click', function(e){
-            e.preventDefault();
-            url = $(this).attr('href');
-            if (url !== '') {
-                $('body').addClass(fadeSelector);
-                setTimeout(function(){
-                    window.location = url;
-                }, fadeTime);
-            }
-            return false;
-        });
-    });
-
-    $(window).on('load', function(){
-        $('body').removeClass(fadeSelector);
-    });
-</script>
 </body>
 </html>

@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* リセット・共通設定 */
+body, div, img, ul, li, a, h1, p, time {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #3d0d0d;
+  font-family: 'Noto Serif JP', 'Lato', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-size: 14px;
+  color: #6e6e6e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #beb7b7;
+}
+
+/* header */
+.header {
+  background-color: #330b0b;
+  padding: 24px;
+}
+
+.header h1 {
+  color: #e2d9d9;
+  text-align: left;
+  font-size: 28px;
+  letter-spacing: 6px;
+  font-weight: 200;
+  margin-right: 30px;
+  float: left;
+}
+
+.header ul {
+  padding: 8px;
+  float: left;
+}
+
+.header ul li {
+  float: left;
+  padding: 8px 16px 0;
+  margin-bottom: 4px;
+}
+
+.header ul li a:hover {
+  opacity: 0.5;
+  -webkit-transition: all  0.1s ease;
+  transition: all  0.1s ease;
+}
+
+.header .header_items:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* contents */
+.contents {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.items:hover .item:not(:hover) {
+  opacity: 0.8;
+  -webkit-transition: all  0.1s ease;
+  transition: all  0.1s ease;
+}
+
+.contents_inner {
+  -webkit-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0;
+  -ms-column-gap: 0;
+  -o-column-gap: 0;
+  column-gap: 0;
+  margin: 0 auto;
+}
+
+.contents_inner .item {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  padding: 2%;
+}
+
+.contents_inner .item a img {
+  border-radius: 8px;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* footer */
+.footer {
+  padding: 40px;
+  background-color: #414141;
+  color: #beb7b7;
+  text-align: center;
+}
+
+/* ############# 767px以下(SP) ############# */
+@media (max-width: 767px) {
+  /* フッターを画面下に固定 */
+  .contents {
+    height: calc(100vh - 288px);
+  }
+}
+
+/* ############# 1005px以下(SP・タブレット) ############# */
+@media (max-width: 1005px) {
+  /* リセット・共通設定 */
+  a:hover {
+    opacity: 1;
+  }
+  /* ボックスの上下 */
+  .header, .contents_inner {
+    margin-bottom: 40px;
+  }
+  /* 全体の横幅を固定 */
+  .header_inner, .contents_inner, .footer_inner {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  /* ヘッダーのpaddingを調整 */
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ############# 1006px以上(PC) ############# */
+@media (min-width: 1006px) {
+  /* 全体の横幅を固定 */
+  .header_inner, .contents_inner, .footer_inner {
+    max-width: 1006px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
