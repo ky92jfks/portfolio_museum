@@ -110,9 +110,9 @@ a {
 /* ############# 767px以下(SP) ############# */
 @media (max-width: 767px) {
   /* フッターを画面下に固定 */
-  .contents {
+  /* .contents {
     height: calc(100vh - 288px);
-  }
+  } */
 }
 
 /* ############# 1005px以下(SP・タブレット) ############# */
@@ -134,6 +134,19 @@ a {
   .header {
     padding-left: 0;
     padding-right: 0;
+  }
+  /* フッターの位置を固定 */
+  body {
+    position: relative;
+  }
+  .contents {
+    min-height: calc(100vh - 88px);
+  }
+  .footer {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
   }
 }
 
